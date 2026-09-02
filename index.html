@@ -1,51 +1,51 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
-    <meta name="description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
-    <meta name="keywords" content="주식 물타기 계산기, 평단가 계산기, 추가매수 평단, 주식 분할매수 시뮬레이터, 손익분기점 계산, 평단 낮추기 계산기, 주식 탈출 계산">
+    <title>二쇱떇 臾쇳?湲??됰떒媛 怨꾩궛湲?| 異붽? 留ㅼ닔 ?섎웾蹂??됰떒媛쨌?먯씡遺꾧린???쒕??덉씠??/title>
+    <meta name="description" content="蹂댁쑀 二쇱떇???됯퇏 ?④?? ?섎웾, ?꾩옱媛 諛?異붽? 留ㅼ닔 湲덉븸???낅젰?섏뿬 ??븘吏???됰떒媛? ?덉텧 紐⑺몴 ?섏씡瑜? ?꾩슂 ?꾧툑??利됱떆 ?쒕??덉씠?섑빀?덈떎.">
+    <meta name="keywords" content="二쇱떇 臾쇳?湲?怨꾩궛湲? ?됰떒媛 怨꾩궛湲? 異붽?留ㅼ닔 ?됰떒, 二쇱떇 遺꾪븷留ㅼ닔 ?쒕??덉씠?? ?먯씡遺꾧린??怨꾩궛, ?됰떒 ??텛湲?怨꾩궛湲? 二쇱떇 ?덉텧 怨꾩궛">
     <link rel="canonical" href="https://stock-average-down-calc.enjoy-onepage.com/">
 
-    <!-- 파비콘 & PWA 매니페스트 -->
+    <!-- ?뚮퉬肄?& PWA 留ㅻ땲?섏뒪??-->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="theme-color" content="#3B82F6">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="물타기계산기">
+    <meta name="apple-mobile-web-app-title" content="臾쇳?湲곌퀎?곌린">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="manifest" href='data:application/manifest+json,{"name":"주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터","short_name":"물타기계산기","description":"보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.","start_url":"/","display":"standalone","theme_color":"#3B82F6","background_color":"#0F172A","lang":"ko","icons":[{"src":"https://stock-average-down-calc.enjoy-onepage.com/icon.png","sizes":"512x512","type":"image/png"}]}'>
+    <link rel="manifest" href='data:application/manifest+json,{"name":"二쇱떇 臾쇳?湲??됰떒媛 怨꾩궛湲?| 異붽? 留ㅼ닔 ?섎웾蹂??됰떒媛쨌?먯씡遺꾧린???쒕??덉씠??,"short_name":"臾쇳?湲곌퀎?곌린","description":"蹂댁쑀 二쇱떇???됯퇏 ?④?? ?섎웾, ?꾩옱媛 諛?異붽? 留ㅼ닔 湲덉븸???낅젰?섏뿬 ??븘吏???됰떒媛? ?덉텧 紐⑺몴 ?섏씡瑜? ?꾩슂 ?꾧툑??利됱떆 ?쒕??덉씠?섑빀?덈떎.","start_url":"/","display":"standalone","theme_color":"#3B82F6","background_color":"#0F172A","lang":"ko","icons":[{"src":"https://stock-average-down-calc.enjoy-onepage.com/icon.png","sizes":"512x512","type":"image/png"}]}'>
 
-    <!-- 오픈그래프 (OpenGraph) 메타 태그 -->
+    <!-- ?ㅽ뵂洹몃옒??(OpenGraph) 硫뷀? ?쒓렇 -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="물타기계산기">
-    <meta property="og:title" content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터">
-    <meta property="og:description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
+    <meta property="og:site_name" content="臾쇳?湲곌퀎?곌린">
+    <meta property="og:title" content="二쇱떇 臾쇳?湲??됰떒媛 怨꾩궛湲?| 異붽? 留ㅼ닔 ?섎웾蹂??됰떒媛쨌?먯씡遺꾧린???쒕??덉씠??>
+    <meta property="og:description" content="蹂댁쑀 二쇱떇???됯퇏 ?④?? ?섎웾, ?꾩옱媛 諛?異붽? 留ㅼ닔 湲덉븸???낅젰?섏뿬 ??븘吏???됰떒媛? ?덉텧 紐⑺몴 ?섏씡瑜? ?꾩슂 ?꾧툑??利됱떆 ?쒕??덉씠?섑빀?덈떎.">
     <meta property="og:url" content="https://stock-average-down-calc.enjoy-onepage.com/">
     <meta property="og:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="800">
     <meta property="og:locale" content="ko_KR">
 
-    <!-- 트위터 카드 (Twitter Card) -->
+    <!-- ?몄쐞??移대뱶 (Twitter Card) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터">
-    <meta name="twitter:description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
+    <meta name="twitter:title" content="二쇱떇 臾쇳?湲??됰떒媛 怨꾩궛湲?| 異붽? 留ㅼ닔 ?섎웾蹂??됰떒媛쨌?먯씡遺꾧린???쒕??덉씠??>
+    <meta name="twitter:description" content="蹂댁쑀 二쇱떇???됯퇏 ?④?? ?섎웾, ?꾩옱媛 諛?異붽? 留ㅼ닔 湲덉븸???낅젰?섏뿬 ??븘吏???됰떒媛? ?덉텧 紐⑺몴 ?섏씡瑜? ?꾩슂 ?꾧툑??利됱떆 ?쒕??덉씠?섑빀?덈떎.">
     <meta name="twitter:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png">
 
-    <!-- JSON-LD 구조화 데이터 (WebApplication Schema) -->
+    <!-- JSON-LD 援ъ“???곗씠??(WebApplication Schema) -->
     <script type="application/ld+json">
     [
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터",
-        "alternateName": "물타기계산기",
+        "name": "二쇱떇 臾쇳?湲??됰떒媛 怨꾩궛湲?| 異붽? 留ㅼ닔 ?섎웾蹂??됰떒媛쨌?먯씡遺꾧린???쒕??덉씠??,
+        "alternateName": "臾쇳?湲곌퀎?곌린",
         "url": "https://stock-average-down-calc.enjoy-onepage.com/",
-        "description": "보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.",
+        "description": "蹂댁쑀 二쇱떇???됯퇏 ?④?? ?섎웾, ?꾩옱媛 諛?異붽? 留ㅼ닔 湲덉븸???낅젰?섏뿬 ??븘吏???됰떒媛? ?덉텧 紐⑺몴 ?섏씡瑜? ?꾩슂 ?꾧툑??利됱떆 ?쒕??덉씠?섑빀?덈떎.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "All",
         "inLanguage": "ko",
@@ -63,13 +63,13 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
             background-color: #f1f5f9;
         }
-        /* Chrome, Safari, Edge, Opera 숫자 화살표 제거 */
+        /* Chrome, Safari, Edge, Opera ?レ옄 ?붿궡???쒓굅 */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-        /* Firefox 숫자 화살표 제거 */
+        /* Firefox ?レ옄 ?붿궡???쒓굅 */
         input[type=number] {
             -moz-appearance: textfield;
         }
@@ -84,123 +84,123 @@
 </head>
 <body class="text-slate-800 min-h-screen flex flex-col items-center py-8 px-4">
     <main class="w-full max-w-md glass-panel p-6 rounded-3xl shadow-xl shadow-slate-200/50">
-        <h1 class="text-2xl font-black text-center mb-1 text-slate-800 tracking-tight">더 사면 평단 얼마 될까?</h1>
-        <p class="text-center text-slate-500 font-medium mb-6 text-sm">내 종목 탈출각 견적기 🚀</p>
+        <h1 class="text-2xl font-black text-center mb-1 text-slate-800 tracking-tight">???щ㈃ ?됰떒 ?쇰쭏 ?좉퉴?</h1>
+        <p class="text-center text-slate-500 font-medium mb-6 text-sm">??醫낅ぉ ?덉텧媛?寃ъ쟻湲???</p>
         
         <div class="space-y-6">
-            <!-- 1. 물린 상태 (현재) -->
+            <!-- 1. 臾쇰┛ ?곹깭 (?꾩옱) -->
             <div class="bg-white/60 p-4 rounded-2xl border border-white/80 shadow-sm">
                 <h2 class="text-sm font-bold mb-4 text-slate-700 flex items-center">
                     <span class="bg-slate-200 text-slate-600 text-xs py-0.5 px-2 rounded-full mr-2">1</span> 
-                    현재 물린 상태 🥶
+                    ?꾩옱 臾쇰┛ ?곹깭 ?Ⅶ
                 </h2>
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-500 mb-1">현재 내 평단가 (원)</label>
+                        <label class="block text-xs font-semibold text-slate-500 mb-1">?꾩옱 ???됰떒媛 (??</label>
                         <input type="number" id="currentPrice" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-500 mb-1">현재 보유 수량 (주/개)</label>
+                        <label class="block text-xs font-semibold text-slate-500 mb-1">?꾩옱 蹂댁쑀 ?섎웾 (二?媛?</label>
                         <input type="number" id="currentQuantity" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
                     </div>
                 </div>
             </div>
 
-            <!-- 2. 영혼 끌어모으기 (추매) -->
+            <!-- 2. ?곹샎 ?뚯뼱紐⑥쑝湲?(異붾ℓ) -->
             <div class="bg-blue-50/60 p-4 rounded-2xl border border-blue-100 shadow-sm relative overflow-hidden">
-                <!-- 장식 -->
+                <!-- ?μ떇 -->
                 <div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-200 rounded-full blur-xl opacity-50"></div>
 
                 <h2 class="text-sm font-bold mb-4 text-blue-700 flex items-center relative z-10">
                     <span class="bg-blue-200 text-blue-700 text-xs py-0.5 px-2 rounded-full mr-2">2</span> 
-                    영혼 끌어모으기 💸
+                    ?곹샎 ?뚯뼱紐⑥쑝湲??뮯
                 </h2>
                 <div class="space-y-4 relative z-10">
                     <div>
-                        <label class="block text-xs font-semibold text-blue-600 mb-1">현재 시장가 (원)</label>
+                        <label class="block text-xs font-semibold text-blue-600 mb-1">?꾩옱 ?쒖옣媛 (??</label>
                         <input type="number" id="marketPrice" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-blue-600 mb-2">추가 매수할 금액 (원)</label>
+                        <label class="block text-xs font-semibold text-blue-600 mb-2">異붽? 留ㅼ닔??湲덉븸 (??</label>
                         <input type="number" id="addAmount" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" placeholder="0">
                         
-                        <!-- 빠른 시드 추가 버튼 -->
+                        <!-- 鍮좊Ⅸ ?쒕뱶 異붽? 踰꾪듉 -->
                         <div class="grid grid-cols-4 gap-1.5 mt-1">
-                            <button onclick="addSeed(100000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+10만</button>
-                            <button onclick="addSeed(1000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+100만</button>
-                            <button onclick="addSeed(5000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+500만</button>
-                            <button onclick="addSeed('ALL')" class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition">🔥풀매수</button>
+                            <button onclick="addSeed(100000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+10留?/button>
+                            <button onclick="addSeed(1000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+100留?/button>
+                            <button onclick="addSeed(5000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+500留?/button>
+                            <button onclick="addSeed('ALL')" class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition">?뵦?留ㅼ닔</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <button onclick="calculate()" class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/30 transform transition active:scale-95 text-lg flex justify-center items-center">
-                🚨 탈출각 견적 뽑기
+                ?슚 ?덉텧媛?寃ъ쟻 戮묎린
             </button>
 
-            <!-- 3. 결과 -->
+            <!-- 3. 寃곌낵 -->
             <div id="resultBox" class="hidden p-5 bg-slate-800 text-white rounded-2xl shadow-xl mt-4 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
                 
-                <!-- 상태 피드백 멘트 -->
+                <!-- ?곹깭 ?쇰뱶諛?硫섑듃 -->
                 <div id="statusMessage" class="text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 animate-pulse text-yellow-400">
-                    결과 멘트
+                    寃곌낵 硫섑듃
                 </div>
 
                 <div class="space-y-4 relative z-10">
                     <div class="flex justify-between items-center bg-slate-700/50 p-3 rounded-xl border border-slate-600">
-                        <span class="text-sm text-slate-300 font-medium">목표 평단가</span>
+                        <span class="text-sm text-slate-300 font-medium">紐⑺몴 ?됰떒媛</span>
                         <div class="text-right">
                             <span id="resTargetAvg" class="text-2xl font-black text-white">0</span>
-                            <span class="text-sm text-slate-400 ml-1">원</span>
+                            <span class="text-sm text-slate-400 ml-1">??/span>
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-2 gap-3">
                         <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
-                            <span class="block text-xs text-slate-400 mb-1">현재 수익률</span>
+                            <span class="block text-xs text-slate-400 mb-1">?꾩옱 ?섏씡瑜?/span>
                             <span id="resCurrentReturn" class="font-bold text-lg text-red-400">0%</span>
                         </div>
                         <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
-                            <span class="block text-xs text-slate-400 mb-1">물타기 후 수익률</span>
+                            <span class="block text-xs text-slate-400 mb-1">臾쇳?湲????섏씡瑜?/span>
                             <span id="resNewReturn" class="font-bold text-lg text-blue-400">0%</span>
                         </div>
                     </div>
 
                     <div class="flex justify-between items-center pt-2">
-                        <span class="text-sm text-slate-400">총 투자금</span>
+                        <span class="text-sm text-slate-400">珥??ъ옄湲?/span>
                         <div class="text-right">
                             <span id="resTotalAmount" class="font-semibold">0</span>
-                            <span class="text-xs text-slate-500 ml-1">원</span>
+                            <span class="text-xs text-slate-500 ml-1">??/span>
                         </div>
                     </div>
                 </div>
 
                 <button onclick="copyResult()" class="mt-5 w-full py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-xl transition-colors text-sm flex justify-center items-center border border-slate-600">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                    📋 갤러리에 구조 요청 (결과 복사)
+                    ?뱥 媛ㅻ윭由ъ뿉 援ъ“ ?붿껌 (寃곌낵 蹂듭궗)
                 </button>
             </div>
             
-            <button onclick="resetFields()" class="w-full py-2 text-slate-400 hover:text-slate-600 font-medium transition-colors text-sm underline underline-offset-4 decoration-slate-300">초기화</button>
+            <button onclick="resetFields()" class="w-full py-2 text-slate-400 hover:text-slate-600 font-medium transition-colors text-sm underline underline-offset-4 decoration-slate-300">珥덇린??/button>
         </div>
         
         <!-- AdSense / Affiliate -->
         <div class="mt-8 space-y-3">
             <div class="text-center text-slate-400 text-xs py-6 border border-dashed border-slate-300 rounded-xl bg-slate-50/50 flex items-center justify-center">
-                <span>[Google AdSense / 하단 광고 영역]</span>
+                <span>[Google AdSense / ?섎떒 愿묎퀬 ?곸뿭]</span>
             </div>
             <div class="text-center text-blue-400/80 text-xs py-3 border border-dashed border-blue-200 rounded-xl bg-blue-50/30 flex items-center justify-center">
-                <span>[Coupang Partners 배너 영역]</span>
+                <span>[Coupang Partners 諛곕꼫 ?곸뿭]</span>
             </div>
         </div>
 
         <footer class="border-t border-slate-200/80 mt-6 pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
-            <div>© 2026 물타기 계산기. All rights reserved.</div>
+            <div>짤 2026 臾쇳?湲?怨꾩궛湲? All rights reserved.</div>
             <div class="flex gap-4">
-                <a href="terms.html" class="hover:text-slate-800 transition-colors">이용약관</a>
-                <a href="privacy.html" class="hover:text-slate-800 transition-colors">개인정보처리방침</a>
+                <a href="terms.html" class="hover:text-slate-800 transition-colors">?댁슜?쎄?</a>
+                <a href="privacy.html" class="hover:text-slate-800 transition-colors">媛쒖씤?뺣낫泥섎━諛⑹묠</a>
             </div>
         </footer>
     </main>
@@ -214,8 +214,8 @@
         function addSeed(amount) {
             const input = document.getElementById('addAmount');
             if (amount === 'ALL') {
-                alert("당신의 용기에 박수를 👏 (사실 풀매수는 위험합니다)");
-                // 임의로 현재 보유금의 5배 추가 (예시)
+                alert("?뱀떊???⑷린??諛뺤닔瑜??몡 (?ъ떎 ?留ㅼ닔???꾪뿕?⑸땲??");
+                // ?꾩쓽濡??꾩옱 蹂댁쑀湲덉쓽 5諛?異붽? (?덉떆)
                 const cp = parseFloat(document.getElementById('currentPrice').value) || 0;
                 const cq = parseFloat(document.getElementById('currentQuantity').value) || 0;
                 if(cp * cq > 0) {
@@ -236,11 +236,11 @@
             const addAmt = parseFloat(document.getElementById('addAmount').value) || 0;
 
             if (cp <= 0 || cq <= 0 || mp <= 0) {
-                alert("현재 평단가, 보유 수량, 현재 시장가를 정확히 입력해주세요.");
+                alert("?꾩옱 ?됰떒媛, 蹂댁쑀 ?섎웾, ?꾩옱 ?쒖옣媛瑜??뺥솗???낅젰?댁＜?몄슂.");
                 return;
             }
 
-            // 물타기 수량 (소수점 버림)
+            // 臾쇳?湲??섎웾 (?뚯닔??踰꾨┝)
             const addQuantity = Math.floor(addAmt / mp) || 0;
             
             const totalCurrentAmt = cp * cq;
@@ -251,9 +251,9 @@
             
             const finalAvg = finalTotalQty > 0 ? (finalTotalAmt / finalTotalQty) : cp;
             
-            // 현재 수익률
+            // ?꾩옱 ?섏씡瑜?
             const currentReturn = ((mp - cp) / cp) * 100;
-            // 물타기 후 수익률 (현재가 기준)
+            // 臾쇳?湲????섏씡瑜?(?꾩옱媛 湲곗?)
             const newReturn = ((mp - finalAvg) / finalAvg) * 100;
 
             document.getElementById('resTargetAvg').innerText = formatNum(Math.round(finalAvg));
@@ -267,19 +267,19 @@
             nRetEl.innerText = newReturn.toFixed(2) + "%";
             nRetEl.className = newReturn > 0 ? "font-bold text-lg text-green-400" : "font-bold text-lg text-blue-400";
 
-            // 피드백 멘트
+            // ?쇰뱶諛?硫섑듃
             const msgEl = document.getElementById('statusMessage');
             if (currentReturn <= -50) {
-                msgEl.innerText = "🚨 구조선 침몰 직전!";
+                msgEl.innerText = "?슚 援ъ“??移⑤ぐ 吏곸쟾!";
                 msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 animate-pulse text-red-500";
             } else if (currentReturn <= -30) {
-                msgEl.innerText = "😭 한강물 온도 어때요?";
+                msgEl.innerText = "?삲 ?쒓컯臾??⑤룄 ?대븣??";
                 msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 text-orange-400";
             } else if (currentReturn < 0) {
-                msgEl.innerText = "💦 열심히 물 긷는 중...";
+                msgEl.innerText = "?뮚 ?댁떖??臾?湲룸뒗 以?..";
                 msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 text-blue-300";
             } else {
-                msgEl.innerText = "🎯 구조대 가시권 진입!";
+                msgEl.innerText = "?렞 援ъ“? 媛?쒓텒 吏꾩엯!";
                 msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 text-green-400";
             }
 
@@ -291,12 +291,12 @@
             const finalAvg = document.getElementById('resTargetAvg').innerText;
             const newReturn = document.getElementById('resNewReturn').innerText;
             
-            const text = `[내 종목 탈출각 견적]\n목표 평단가: ${finalAvg}원\n예상 수익률: ${newReturn}\n#구조대 #언제와요 #물타기계산기`;
+            const text = `[??醫낅ぉ ?덉텧媛?寃ъ쟻]\n紐⑺몴 ?됰떒媛: ${finalAvg}??n?덉긽 ?섏씡瑜? ${newReturn}\n#援ъ“? #?몄젣???#臾쇳?湲곌퀎?곌린`;
             
             navigator.clipboard.writeText(text).then(() => {
-                alert("결과가 복사되었습니다! 갤러리에 구조 요청하세요 🚀");
+                alert("寃곌낵媛 蹂듭궗?섏뿀?듬땲?? 媛ㅻ윭由ъ뿉 援ъ“ ?붿껌?섏꽭????");
             }).catch(err => {
-                alert("복사 실패 ㅠㅠ 다시 시도해주세요.");
+                alert("蹂듭궗 ?ㅽ뙣 ?졼뀪 ?ㅼ떆 ?쒕룄?댁＜?몄슂.");
             });
         }
 
@@ -310,3 +310,4 @@
     </script>
 </body>
 </html>
+
