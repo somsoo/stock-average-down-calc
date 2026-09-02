@@ -2,61 +2,60 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>주식 물타기 계산기 - 평단가 및 추가 매수 시뮬레이터</title>
-    <meta name="description" content="주식, 코인 물타기(추가 매수) 시 평균 단가를 쉽게 계산해보세요. 현재 보유 단가와 수량, 추가 매수가를 입력하면 실시간으로 최종 평단가와 투자금을 계산해주는 무료 주식 계산기입니다.">
-    <meta name="keywords" content="주식 물타기 계산기, 평단가 계산기, 주식 평균단가 계산기, 물타기 계산법, 코인 물타기 계산기, 추가매수 평단가, 주식 수익률 계산기">
-    <meta name="author" content="OnePage Factory">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://somsoo.github.io/stock-average-down-calc/">
+    <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
+    <meta name="description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
+    <meta name="keywords" content="주식 물타기 계산기, 평단가 계산기, 추가매수 평단, 주식 분할매수 시뮬레이터, 손익분기점 계산, 평단 낮추기 계산기, 주식 탈출 계산">
+    <link rel="canonical" href="https://stock-average-down-calc.enjoy-onepage.com/">
 
-    <!-- Favicon & Touch Icons -->
+    <!-- 파비콘 & PWA 매니페스트 -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#3B82F6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="물타기계산기">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href='data:application/manifest+json,{"name":"주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터","short_name":"물타기계산기","description":"보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.","start_url":"/","display":"standalone","theme_color":"#3B82F6","background_color":"#0F172A","lang":"ko","icons":[{"src":"https://stock-average-down-calc.enjoy-onepage.com/icon.png","sizes":"512x512","type":"image/png"}]}'>
 
-    <!-- Open Graph / Facebook -->
+    <!-- 오픈그래프 (OpenGraph) 메타 태그 -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="주식 물타기 계산기 - 평단가 및 추가 매수 시뮬레이터">
-    <meta property="og:description" content="주식 및 코인 추가 매수 시 최종 평균단가와 총 투자금액을 실시간으로 계산해주는 스마트 평단가 계산기입니다.">
-    <meta property="og:url" content="https://somsoo.github.io/stock-average-down-calc/">
-    <meta property="og:image" content="og-image.png">
+    <meta property="og:site_name" content="물타기계산기">
+    <meta property="og:title" content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터">
+    <meta property="og:description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
+    <meta property="og:url" content="https://stock-average-down-calc.enjoy-onepage.com/">
+    <meta property="og:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="800">
-    <meta property="og:image:alt" content="주식 물타기 계산기 대표 이미지">
-    <meta property="og:site_name" content="주식 물타기 계산기">
     <meta property="og:locale" content="ko_KR">
 
-    <!-- Twitter Card -->
+    <!-- 트위터 카드 (Twitter Card) -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="주식 물타기 계산기 - 평단가 및 추가 매수 시뮬레이터">
-    <meta name="twitter:description" content="주식 및 코인 추가 매수 시 최종 평균단가와 총 투자금액을 실시간으로 계산해보세요.">
-    <meta name="twitter:image" content="og-image.png">
+    <meta name="twitter:title" content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터">
+    <meta name="twitter:description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
+    <meta name="twitter:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png">
 
-    <!-- JSON-LD Structured Data (WebApplication Schema) -->
+    <!-- JSON-LD 구조화 데이터 (WebApplication Schema) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "주식 물타기 계산기",
-      "alternateName": ["Stock Average Down Calculator", "주식 평단가 계산기", "물타기 계산기"],
-      "url": "https://somsoo.github.io/stock-average-down-calc/",
-      "description": "주식 및 가상화폐 추가 매수(물타기/불타기) 시 최종 보유 수량, 총 투자금액, 예상 평균 단가를 실시간으로 계산해주는 무료 웹 도구입니다.",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript. Requires HTML5.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      },
-      "featureList": [
-        "실시간 주식 물타기/불타기 평단가 계산",
-        "추가 매수 수량 및 매수가 반영",
-        "총 투자금액 및 최종 수량 자동 산출",
-        "모바일 최적화 직관적 UI"
-      ]
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터",
+        "alternateName": "물타기계산기",
+        "url": "https://stock-average-down-calc.enjoy-onepage.com/",
+        "description": "보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        }
+      }
+    ]
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://somsoo.github.io/stock-average-down-calc/sitemap.xml
+
+Sitemap: https://stock-average-down-calc.enjoy-onepage.com/sitemap.xml
