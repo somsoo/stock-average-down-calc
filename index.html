@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>주식 물타기 계산기 - 평단가 및 추가 매수 시뮬레이터</title>
+    <meta name="description" content="주식, 코인 물타기(추가 매수) 시 평균 단가를 쉽게 계산해보세요. 현재 보유 단가와 수량, 추가 매수가를 입력하면 실시간으로 최종 평단가와 투자금을 계산해주는 무료 주식 계산기입니다.">
+    <meta name="keywords" content="주식 물타기 계산기, 평단가 계산기, 주식 평균단가 계산기, 물타기 계산법, 코인 물타기 계산기, 추가매수 평단가, 주식 수익률 계산기">
+    <meta name="author" content="OnePage Factory">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://somsoo.github.io/stock-average-down-calc/">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="주식 물타기 계산기 - 평단가 및 추가 매수 시뮬레이터">
+    <meta property="og:description" content="주식 및 코인 추가 매수 시 최종 평균단가와 총 투자금액을 실시간으로 계산해주는 스마트 평단가 계산기입니다.">
+    <meta property="og:url" content="https://somsoo.github.io/stock-average-down-calc/">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="주식 물타기 계산기 대표 이미지">
+    <meta property="og:site_name" content="주식 물타기 계산기">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="주식 물타기 계산기 - 평단가 및 추가 매수 시뮬레이터">
+    <meta name="twitter:description" content="주식 및 코인 추가 매수 시 최종 평균단가와 총 투자금액을 실시간으로 계산해보세요.">
+    <meta name="twitter:image" content="og-image.png">
+
+    <!-- JSON-LD Structured Data (WebApplication Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "주식 물타기 계산기",
+      "alternateName": ["Stock Average Down Calculator", "주식 평단가 계산기", "물타기 계산기"],
+      "url": "https://somsoo.github.io/stock-average-down-calc/",
+      "description": "주식 및 가상화폐 추가 매수(물타기/불타기) 시 최종 보유 수량, 총 투자금액, 예상 평균 단가를 실시간으로 계산해주는 무료 웹 도구입니다.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "featureList": [
+        "실시간 주식 물타기/불타기 평단가 계산",
+        "추가 매수 수량 및 매수가 반영",
+        "총 투자금액 및 최종 수량 자동 산출",
+        "모바일 최적화 직관적 UI"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            background-color: #f1f5f9;
+        }
+        /* Chrome, Safari, Edge, Opera 숫자 화살표 제거 */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Firefox 숫자 화살표 제거 */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col items-center py-8 px-4">
+    <main class="w-full max-w-md glass-panel p-6 rounded-3xl shadow-xl shadow-slate-200/50">
+        <h1 class="text-2xl font-black text-center mb-1 text-slate-800 tracking-tight">더 사면 평단 얼마 될까?</h1>
+        <p class="text-center text-slate-500 font-medium mb-6 text-sm">내 종목 탈출각 견적기 🚀</p>
+        
+        <div class="space-y-6">
+            <!-- 1. 물린 상태 (현재) -->
+            <div class="bg-white/60 p-4 rounded-2xl border border-white/80 shadow-sm">
+                <h2 class="text-sm font-bold mb-4 text-slate-700 flex items-center">
+                    <span class="bg-slate-200 text-slate-600 text-xs py-0.5 px-2 rounded-full mr-2">1</span> 
+                    현재 물린 상태 🥶
+                </h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 mb-1">현재 내 평단가 (원)</label>
+                        <input type="number" id="currentPrice" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-500 mb-1">현재 보유 수량 (주/개)</label>
+                        <input type="number" id="currentQuantity" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 영혼 끌어모으기 (추매) -->
+            <div class="bg-blue-50/60 p-4 rounded-2xl border border-blue-100 shadow-sm relative overflow-hidden">
+                <!-- 장식 -->
+                <div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-200 rounded-full blur-xl opacity-50"></div>
+
+                <h2 class="text-sm font-bold mb-4 text-blue-700 flex items-center relative z-10">
+                    <span class="bg-blue-200 text-blue-700 text-xs py-0.5 px-2 rounded-full mr-2">2</span> 
+                    영혼 끌어모으기 💸
+                </h2>
+                <div class="space-y-4 relative z-10">
+                    <div>
+                        <label class="block text-xs font-semibold text-blue-600 mb-1">현재 시장가 (원)</label>
+                        <input type="number" id="marketPrice" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-blue-600 mb-2">추가 매수할 금액 (원)</label>
+                        <input type="number" id="addAmount" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" placeholder="0">
+                        
+                        <!-- 빠른 시드 추가 버튼 -->
+                        <div class="grid grid-cols-4 gap-1.5 mt-1">
+                            <button onclick="addSeed(100000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+10만</button>
+                            <button onclick="addSeed(1000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+100만</button>
+                            <button onclick="addSeed(5000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+500만</button>
+                            <button onclick="addSeed('ALL')" class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition">🔥풀매수</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="calculate()" class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/30 transform transition active:scale-95 text-lg flex justify-center items-center">
+                🚨 탈출각 견적 뽑기
+            </button>
+
+            <!-- 3. 결과 -->
+            <div id="resultBox" class="hidden p-5 bg-slate-800 text-white rounded-2xl shadow-xl mt-4 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
+                
+                <!-- 상태 피드백 멘트 -->
+                <div id="statusMessage" class="text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 animate-pulse text-yellow-400">
+                    결과 멘트
+                </div>
+
+                <div class="space-y-4 relative z-10">
+                    <div class="flex justify-between items-center bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                        <span class="text-sm text-slate-300 font-medium">목표 평단가</span>
+                        <div class="text-right">
+                            <span id="resTargetAvg" class="text-2xl font-black text-white">0</span>
+                            <span class="text-sm text-slate-400 ml-1">원</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                            <span class="block text-xs text-slate-400 mb-1">현재 수익률</span>
+                            <span id="resCurrentReturn" class="font-bold text-lg text-red-400">0%</span>
+                        </div>
+                        <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                            <span class="block text-xs text-slate-400 mb-1">물타기 후 수익률</span>
+                            <span id="resNewReturn" class="font-bold text-lg text-blue-400">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-2">
+                        <span class="text-sm text-slate-400">총 투자금</span>
+                        <div class="text-right">
+                            <span id="resTotalAmount" class="font-semibold">0</span>
+                            <span class="text-xs text-slate-500 ml-1">원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="copyResult()" class="mt-5 w-full py-3 bg-slate-700 hover:bg-slate-600 text-white font-bold rounded-xl transition-colors text-sm flex justify-center items-center border border-slate-600">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                    📋 갤러리에 구조 요청 (결과 복사)
+                </button>
+            </div>
+            
+            <button onclick="resetFields()" class="w-full py-2 text-slate-400 hover:text-slate-600 font-medium transition-colors text-sm underline underline-offset-4 decoration-slate-300">초기화</button>
+        </div>
+        
+        <!-- AdSense / Affiliate -->
+        <div class="mt-8 space-y-3">
+            <div class="text-center text-slate-400 text-xs py-6 border border-dashed border-slate-300 rounded-xl bg-slate-50/50 flex items-center justify-center">
+                <span>[Google AdSense / 하단 광고 영역]</span>
+            </div>
+            <div class="text-center text-blue-400/80 text-xs py-3 border border-dashed border-blue-200 rounded-xl bg-blue-50/30 flex items-center justify-center">
+                <span>[Coupang Partners 배너 영역]</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function formatNum(num) {
+            if (!isFinite(num) || isNaN(num)) return '0';
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        function addSeed(amount) {
+            const input = document.getElementById('addAmount');
+            if (amount === 'ALL') {
+                alert("당신의 용기에 박수를 👏 (사실 풀매수는 위험합니다)");
+                // 임의로 현재 보유금의 5배 추가 (예시)
+                const cp = parseFloat(document.getElementById('currentPrice').value) || 0;
+                const cq = parseFloat(document.getElementById('currentQuantity').value) || 0;
+                if(cp * cq > 0) {
+                    input.value = (cp * cq) * 5;
+                } else {
+                    input.value = 10000000;
+                }
+            } else {
+                const currentVal = parseFloat(input.value) || 0;
+                input.value = currentVal + amount;
+            }
+        }
+
+        function calculate() {
+            const cp = parseFloat(document.getElementById('currentPrice').value) || 0;
+            const cq = parseFloat(document.getElementById('currentQuantity').value) || 0;
+            const mp = parseFloat(document.getElementById('marketPrice').value) || 0;
+            const addAmt = parseFloat(document.getElementById('addAmount').value) || 0;
+
+            if (cp <= 0 || cq <= 0 || mp <= 0) {
+                alert("현재 평단가, 보유 수량, 현재 시장가를 정확히 입력해주세요.");
+                return;
+            }
+
+            // 물타기 수량 (소수점 버림)
+            const addQuantity = Math.floor(addAmt / mp) || 0;
+            
+            const totalCurrentAmt = cp * cq;
+            const actualAddAmt = addQuantity * mp;
+            
+            const finalTotalAmt = totalCurrentAmt + actualAddAmt;
+            const finalTotalQty = cq + addQuantity;
+            
+            const finalAvg = finalTotalQty > 0 ? (finalTotalAmt / finalTotalQty) : cp;
+            
+            // 현재 수익률
+            const currentReturn = ((mp - cp) / cp) * 100;
+            // 물타기 후 수익률 (현재가 기준)
+            const newReturn = ((mp - finalAvg) / finalAvg) * 100;
+
+            document.getElementById('resTargetAvg').innerText = formatNum(Math.round(finalAvg));
+            document.getElementById('resTotalAmount').innerText = formatNum(Math.round(finalTotalAmt));
+            
+            const cRetEl = document.getElementById('resCurrentReturn');
+            cRetEl.innerText = currentReturn.toFixed(2) + "%";
+            cRetEl.className = currentReturn > 0 ? "font-bold text-lg text-green-400" : "font-bold text-lg text-red-400";
+            
+            const nRetEl = document.getElementById('resNewReturn');
+            nRetEl.innerText = newReturn.toFixed(2) + "%";
+            nRetEl.className = newReturn > 0 ? "font-bold text-lg text-green-400" : "font-bold text-lg text-blue-400";
+
+            // 피드백 멘트
+            const msgEl = document.getElementById('statusMessage');
+            if (currentReturn <= -50) {
+                msgEl.innerText = "🚨 구조선 침몰 직전!";
+                msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 animate-pulse text-red-500";
+            } else if (currentReturn <= -30) {
+                msgEl.innerText = "😭 한강물 온도 어때요?";
+                msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 text-orange-400";
+            } else if (currentReturn < 0) {
+                msgEl.innerText = "💦 열심히 물 긷는 중...";
+                msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 text-blue-300";
+            } else {
+                msgEl.innerText = "🎯 구조대 가시권 진입!";
+                msgEl.className = "text-center font-bold text-lg mb-5 pb-4 border-b border-slate-700 text-green-400";
+            }
+
+            document.getElementById('resultBox').classList.remove('hidden');
+            document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function copyResult() {
+            const finalAvg = document.getElementById('resTargetAvg').innerText;
+            const newReturn = document.getElementById('resNewReturn').innerText;
+            
+            const text = `[내 종목 탈출각 견적]\n목표 평단가: ${finalAvg}원\n예상 수익률: ${newReturn}\n#구조대 #언제와요 #물타기계산기`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert("결과가 복사되었습니다! 갤러리에 구조 요청하세요 🚀");
+            }).catch(err => {
+                alert("복사 실패 ㅠㅠ 다시 시도해주세요.");
+            });
+        }
+
+        function resetFields() {
+            document.getElementById('currentPrice').value = '';
+            document.getElementById('currentQuantity').value = '';
+            document.getElementById('marketPrice').value = '';
+            document.getElementById('addAmount').value = '';
+            document.getElementById('resultBox').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

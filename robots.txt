@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://somsoo.github.io/stock-average-down-calc/sitemap.xml
