@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
+    <link>https://stock-average-down-calc.enjoy-onepage.com/</link>
+    <description>보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.</description>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 12 Sep 2026 03:00:00 +0900</lastBuildDate>
+    <atom:link href="https://stock-average-down-calc.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/</guid>
+      <description>보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.</description>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>서비스 소개 및 산출 기준 | 주식 물타기 평단가 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/about.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/about.html</guid>
+      <description>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터의 서비스 소개, 공식 법령 산출 수식 및 데이터 처리 원칙 안내입니다.</description>
+      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>개인정보처리방침 | 주식 물타기 평단가 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/privacy.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/privacy.html</guid>
+      <description>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터의 개인정보 보호 정책, 쿠키 사용 및 브라우저 로컬 데이터 보안 원칙입니다.</description>
+      <pubDate>Sat, 12 Sep 2026 01:10:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>손익분기점 탈출 및 리스크 관리 전략 | 주식 물타기 평단가 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/guides/breakeven-exit-plan.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/guides/breakeven-exit-plan.html</guid>
+      <description>평단가를 낮춘 후 본전 또는 약수익 구간에서 비중을 축소하여 현금 유동성을 확보하는 출구 전략을 제시합니다.</description>
+      <pubDate>Sat, 12 Sep 2026 02:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>물타기 완벽 해결 실무 가이드 및 핵심 요령 | 주식 물타기 평단가 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/guides/guide1.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/guides/guide1.html</guid>
+      <description>물타기에 관한 법령 및 공식 산정 기준은 공공기관 훈령과 최신 개정 규정에 따르며, 개별 상황에 따라 적용 요율과 한도가 달라질 수 있...</description>
+      <pubDate>Sat, 12 Sep 2026 02:15:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>물타기 기준 주의사항 및 2026년 최신 개정 기준 | 주식 물타기 평단가 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/guides/guide2.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/guides/guide2.html</guid>
+      <description>물타기 기준 관련 분쟁 예방을 위해서는 서면 합의서 및 공식 명세서를 보관하고, 모의 계산기를 통해 예상 결과를 교차 검증하는 절차가 ...</description>
+      <pubDate>Sat, 12 Sep 2026 02:30:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>하락장 분할 매수 물타기 성공 원칙과 주의점 | 주식 물타기 평단가 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/guides/water-down-strategy.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/guides/water-down-strategy.html</guid>
+      <description>맹목적인 물타기는 비중 확대로 인한 손실을 키웁니다. 지지선 확인과 비중 관리 분할 매수 3원칙을 알아봅니다.</description>
+      <pubDate>Sat, 12 Sep 2026 02:45:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>
