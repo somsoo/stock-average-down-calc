@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인정보처리방침 | 물타기 계산기</title>
-    <meta name="description" content="주식·코인 물타기 계산기 개인정보처리방침입니다.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%); min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-radius: 24px; box-shadow: 0 12px 36px 0 rgba(31, 38, 135, 0.15); border: 1px solid rgba(255, 255, 255, 0.4); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 | 주식 물타기 평단가 계산기</title>
+  <meta name="description" content="주식 물타기 평단가 계산기의 개인정보 처리방침 및 데이터 로컬 연산 원칙 안내">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://stock-average-down-calc.enjoy-onepage.com/privacy.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col items-center justify-center p-4 py-10">
-    <div class="glass-card w-full max-w-2xl p-6 sm:p-10 mb-6">
-        <div class="border-b border-slate-200 pb-6 mb-6">
-            <a href="index.html" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 mb-4 transition-colors">← 계산기로 돌아가기</a>
-            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">개인정보처리방침</h1>
-        </div>
-        <div class="space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 mb-2">1. 개인정보 미수집 원칙</h2>
-                <p>본 사이트는 회원가입이나 로그인이 필요 없는 무료 유틸리티이며, 이용자의 어떠한 자산 정보나 개인정보도 서버에 수집, 저장, 전송하지 않습니다.</p>
-            </section>
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 mb-2">2. 로컬 브라우저 연산 안내</h2>
-                <p>입력하신 평단가, 수량, 시장가 등 모든 계산 수치는 오직 이용자의 웹 브라우저 내부에서만 처리되며 외부로 유출되지 않습니다.</p>
-            </section>
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 mb-2">3. 쿠키(Cookie) 및 광고 안내</h2>
-                <p>사이트 운영 및 유지비를 위해 게재되는 구글 애드센스(Google AdSense)는 맞춤형 광고 제공을 위해 타사 쿠키를 사용할 수 있습니다. 이용자는 브라우저 설정을 통해 쿠키를 차단할 수 있습니다.</p>
-            </section>
-        </div>
-        <div class="border-t border-slate-200 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-            <div>© 2026 물타기 계산기. All rights reserved.</div>
-            <div class="flex gap-4">
-                <a href="terms.html" class="hover:text-slate-800 transition-colors">이용약관</a>
-                <a href="privacy.html" class="font-bold text-slate-800 underline">개인정보처리방침</a>
-            </div>
-        </div>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition">
+        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">물타기</span>
+        <span>주식 물타기 평단가 계산기</span>
+      </a>
+      <a href="/" class="text-xs font-semibold text-slate-600 hover:text-blue-600 transition">← 메인 도구로 돌아가기</a>
     </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+    <article class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+      <div>
+        <h1 class="text-2xl font-extrabold text-slate-900">개인정보처리방침</h1>
+        <p class="text-xs text-slate-500 mt-1">시행일자: 2026년 1월 1일</p>
+      </div>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">1. 개인정보 수집 및 저장 배제 원칙</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          주식 물타기 평단가 계산기('웹사이트')는 사용자의 금융 데이터, 계산 입력값, 식별 정보 등을 일체 서버로 전송하거나 데이터베이스에 보관하지 않습니다. 모든 계산은 사용자의 웹 브라우저 내에서 자바스크립트를 통해 실시간 로컬 처리됩니다.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">2. 쿠키 및 광고 네트워크</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          본 사이트는 안정적인 서비스 유지 및 호스팅 운영비 조달을 위해 Google AdSense를 활용하고 있습니다. Google을 포함한 제3자 광고 사업자는 사용자의 웹 방문 기록을 기반으로 맞춤형 광고를 제공하기 위해 쿠키(Cookie)를 활용할 수 있습니다. 사용자는 브라우저 설정을 통해 언제든지 쿠키 저장을 거부할 수 있습니다.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">3. 문의처</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          개인정보 보호 정책 및 서비스 관련 문의는 enjoy-onepage 운영팀으로 연락 주시기 바랍니다.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+    &copy; 2026 주식 물타기 평단가 계산기. All rights reserved.
+  </footer>
 </body>
 </html>

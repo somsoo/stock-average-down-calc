@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서비스 소개 및 산출 기준 | 주식 물타기 평단가 계산기</title>
+  <meta name="description" content="추가 매수 수량별 평단가·손익분기점 실시간 시뮬레이터">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://stock-average-down-calc.enjoy-onepage.com/about.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition">
+        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">물타기</span>
+        <span>주식 물타기 평단가 계산기</span>
+      </a>
+      <a href="/" class="text-xs font-semibold text-slate-600 hover:text-blue-600 transition">← 메인 도구로 돌아가기</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+    <article class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+      <div>
+        <h1 class="text-2xl font-extrabold text-slate-900">서비스 소개 및 산출 기준</h1>
+        <p class="text-xs text-slate-500 mt-1">추가 매수 수량별 평단가·손익분기점 실시간 시뮬레이터</p>
+      </div>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">1. 서비스 개발 목적</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          '주식 물타기 평단가 계산기'는 주식 및 가상자산 투자자가 하락장에서 추가 매수를 진행할 때 변화하는 1주당 평균 매수 단가와 목표 탈출 수익률을 정밀하게 모의계산하는 투자 보조 도구입니다.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">2. 핵심 산정 수식 및 알고리즘</h2>
+        <div class="space-y-2 text-sm text-slate-700">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800">새로운 평균단가 =</strong> (기존 보유총액 + 추가 매수총액) ÷ (기존 수량 + 추가 수량)
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800">목표 탈출 손익분기점 =</strong> 새로운 평균단가에 도달하기 위한 현재가 대비 반등 필요 상승률(%)
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800">필요 추가 예수금 =</strong> 원하는 목표 평단가에 도달하기 위해 투입해야 하는 추가 현금 총액
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">3. 데이터 보안 및 신뢰성</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          본 도구는 사용자의 모든 입력값을 외부 서버로 전송하지 않고 브라우저(클라이언트) 메모리 상에서만 100% 로컬 연산합니다. 본 계산 결과는 모의 참고용이며 실제 적용 시에는 관련 공공기관 및 전문가 상담을 권장합니다.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+    &copy; 2026 주식 물타기 평단가 계산기. All rights reserved.
+  </footer>
+</body>
+</html>
