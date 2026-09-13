@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
-    <meta name="description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
-    <meta name="keywords" content="주식 물타기 계산기, 평단가 계산기, 추가매수 평단, 주식 분할매수 시뮬레이터, 손익분기점 계산, 평단 낮추기 계산기, 주식 탈출 계산">
-    <link rel="canonical" href="https://stock-average-down-calc.enjoy-onepage.com/">
-
-    <!-- 파비콘 & PWA 매니페스트 -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta name="theme-color" content="#3B82F6">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="물타기계산기">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="manifest" href='data:application/manifest+json,{"name":"주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터","short_name":"물타기계산기","description":"보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.","start_url":"/","display":"standalone","theme_color":"#3B82F6","background_color":"#0F172A","lang":"ko","icons":[{"src":"https://stock-average-down-calc.enjoy-onepage.com/icon.png","sizes":"512x512","type":"image/png"}]}'>
-
-    <!-- 오픈그래프 (OpenGraph) 메타 태그 -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="물타기계산기">
-    <meta property="og:title" content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터">
-    <meta property="og:description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
-    <meta property="og:url" content="https://stock-average-down-calc.enjoy-onepage.com/">
-    <meta property="og:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="800">
-    <meta property="og:locale" content="ko_KR">
-
-    <!-- 트위터 카드 (Twitter Card) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터">
-    <meta name="twitter:description" content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.">
-    <meta name="twitter:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png">
-
-    <!-- JSON-LD 구조화 데이터 (WebApplication Schema) -->
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
+<meta content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다." name="description"/>
+<meta content="주식 물타기 계산기, 평단가 계산기, 추가매수 평단, 주식 분할매수 시뮬레이터, 손익분기점 계산, 평단 낮추기 계산기, 주식 탈출 계산" name="keywords"/>
+<link href="https://stock-average-down-calc.enjoy-onepage.com/" rel="canonical"/>
+<!-- 파비콘 & PWA 매니페스트 -->
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="icon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="#3B82F6" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="물타기계산기" name="apple-mobile-web-app-title"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<link href='data:application/manifest+json,{"name":"주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터","short_name":"물타기계산기","description":"보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.","start_url":"/","display":"standalone","theme_color":"#3B82F6","background_color":"#0F172A","lang":"ko","icons":[{"src":"https://stock-average-down-calc.enjoy-onepage.com/icon.png","sizes":"512x512","type":"image/png"}]}' rel="manifest"/>
+<!-- 오픈그래프 (OpenGraph) 메타 태그 -->
+<meta content="website" property="og:type"/>
+<meta content="물타기계산기" property="og:site_name"/>
+<meta content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터" property="og:title"/>
+<meta content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다." property="og:description"/>
+<meta content="https://stock-average-down-calc.enjoy-onepage.com/" property="og:url"/>
+<meta content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png" property="og:image"/>
+<meta content="800" property="og:image:width"/>
+<meta content="800" property="og:image:height"/>
+<meta content="ko_KR" property="og:locale"/>
+<!-- 트위터 카드 (Twitter Card) -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터" name="twitter:title"/>
+<meta content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다." name="twitter:description"/>
+<meta content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png" name="twitter:image"/>
+<!-- JSON-LD 구조화 데이터 (WebApplication Schema) -->
+<script type="application/ld+json">
     [
       {
         "@context": "https://schema.org",
@@ -57,8 +53,8 @@
       }
     ]
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
             background-color: #f1f5f9;
@@ -81,191 +77,177 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
     </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-  <link rel="alternate" type="application/rss+xml" title="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 RSS Feed" href="https://stock-average-down-calc.enjoy-onepage.com/rss.xml" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://stock-average-down-calc.enjoy-onepage.com/sitemap.xml" />
-</head>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
+<link href="https://stock-average-down-calc.enjoy-onepage.com/rss.xml" rel="alternate" title="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 RSS Feed" type="application/rss+xml">
+<link href="https://stock-average-down-calc.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml">
+</link></link></head>
 <body class="text-slate-800 min-h-screen flex flex-col items-center py-8 px-4">
 
-    <!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
-    <div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 8px auto 16px; overflow: hidden; text-align: center; min-height: 50px; max-height: 60px;">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:100%;height:60px;"
-             data-ad-client="ca-pub-2228289204702106"
-             data-ad-slot="3824727725"
-             data-ad-format="horizontal"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-    <main class="w-full max-w-5xl glass-panel p-3.5 sm:p-6 rounded-3xl shadow-xl shadow-slate-200/50 mb-8">
-    
+<!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
+<div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 8px auto 16px; overflow: hidden; text-align: center; min-height: 50px; max-height: 60px;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:100%;height:60px;"
+         data-ad-client="ca-pub-2228289204702106"
+         data-ad-slot="3824727725"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
 
-        <h1 class="text-2xl font-black text-center mb-1 text-slate-800 tracking-tight">더 사면 평단 얼마 될까?</h1>
-        <p class="text-center text-slate-500 font-medium mb-6 text-sm">내 종목 탈출각 견적기 🚀</p>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-            <!-- LEFT COLUMN: INPUTS (6 COLS) -->
-            <div class="lg:col-span-6 space-y-5">
-            <!-- 1. 물린 상태 (현재) -->
-            <div class="bg-white/60 p-4 rounded-2xl border border-white/80 shadow-sm">
-                <h2 class="text-sm font-bold mb-4 text-slate-700 flex items-center">
-                    <span class="bg-slate-200 text-slate-600 text-xs py-0.5 px-2 rounded-full mr-2">1</span> 
+<main class="w-full max-w-5xl glass-panel p-3.5 sm:p-6 rounded-3xl shadow-xl shadow-slate-200/50 mb-8">
+<h1 class="text-2xl font-black text-center mb-1 text-slate-800 tracking-tight">더 사면 평단 얼마 될까?</h1>
+<p class="text-center text-slate-500 font-medium mb-6 text-sm">내 종목 탈출각 견적기 🚀</p>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+<!-- LEFT COLUMN: INPUTS (6 COLS) -->
+<div class="lg:col-span-6 space-y-5">
+<!-- 1. 물린 상태 (현재) -->
+<div class="bg-white/60 p-4 rounded-2xl border border-white/80 shadow-sm">
+<h2 class="text-sm font-bold mb-4 text-slate-700 flex items-center">
+<span class="bg-slate-200 text-slate-600 text-xs py-0.5 px-2 rounded-full mr-2">1</span> 
                     현재 물린 상태 🥶
                 </h2>
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-500 mb-1">현재 내 평단가 (원)</label>
-                        <input type="number" id="currentPrice" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-500 mb-1">현재 보유 수량 (주/개)</label>
-                        <input type="number" id="currentQuantity" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. 영혼 끌어모으기 (추매) -->
-            <div class="bg-blue-50/60 p-4 rounded-2xl border border-blue-100 shadow-sm relative overflow-hidden">
-                <!-- 장식 -->
-                <div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-200 rounded-full blur-xl opacity-50"></div>
-
-                <h2 class="text-sm font-bold mb-4 text-blue-700 flex items-center relative z-10">
-                    <span class="bg-blue-200 text-blue-700 text-xs py-0.5 px-2 rounded-full mr-2">2</span> 
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-semibold text-slate-500 mb-1">현재 내 평단가 (원)</label>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentPrice" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-500 mb-1">현재 보유 수량 (주/개)</label>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentQuantity" placeholder="0" type="number"/>
+</div>
+</div>
+</div>
+<!-- 2. 영혼 끌어모으기 (추매) -->
+<div class="bg-blue-50/60 p-4 rounded-2xl border border-blue-100 shadow-sm relative overflow-hidden">
+<!-- 장식 -->
+<div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-200 rounded-full blur-xl opacity-50"></div>
+<h2 class="text-sm font-bold mb-4 text-blue-700 flex items-center relative z-10">
+<span class="bg-blue-200 text-blue-700 text-xs py-0.5 px-2 rounded-full mr-2">2</span> 
                     영혼 끌어모으기 💸
                 </h2>
-                <div class="space-y-4 relative z-10">
-                    <div>
-                        <label class="block text-xs font-semibold text-blue-600 mb-1">현재 시장가 (원)</label>
-                        <input type="number" id="marketPrice" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" placeholder="0">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-blue-600 mb-2">추가 매수할 금액 (원)</label>
-                        <input type="number" id="addAmount" class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" placeholder="0">
-                        
-                        <!-- 빠른 시드 추가 버튼 -->
-                        <div class="grid grid-cols-4 gap-1.5 mt-1">
-                            <button onclick="addSeed(100000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+10만</button>
-                            <button onclick="addSeed(1000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+100만</button>
-                            <button onclick="addSeed(5000000)" class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition">+500만</button>
-                            <button onclick="addSeed('ALL')" class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition">🔥풀매수</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button onclick="calculate()" class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/30 transform transition active:scale-95 text-lg flex justify-center items-center">
+<div class="space-y-4 relative z-10">
+<div>
+<label class="block text-xs font-semibold text-blue-600 mb-1">현재 시장가 (원)</label>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="marketPrice" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-blue-600 mb-2">추가 매수할 금액 (원)</label>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" id="addAmount" placeholder="0" type="number"/>
+<!-- 빠른 시드 추가 버튼 -->
+<div class="grid grid-cols-4 gap-1.5 mt-1">
+<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(100000)">+10만</button>
+<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(1000000)">+100만</button>
+<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(5000000)">+500만</button>
+<button class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition" onclick="addSeed('ALL')">🔥풀매수</button>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/30 transform transition active:scale-95 text-lg flex justify-center items-center" onclick="calculate()">
                 🚨 탈출각 견적 뽑기
             </button>
-
-            </div>
-            <!-- RIGHT COLUMN: RESULTS & SIMULATION (6 COLS, STICKY) -->
-            <div class="lg:col-span-6 space-y-4 lg:sticky lg:top-6">
-                <!-- 3. 결과 -->
-                <div id="resultBox" class="p-5 bg-slate-800 text-white rounded-2xl shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
-                    
-                    <!-- 상태 피드백 멘트 -->
-                    <div id="statusMessage" class="text-center font-bold text-lg mb-4 pb-3 border-b border-slate-700 text-yellow-400">
+</div>
+<!-- RIGHT COLUMN: RESULTS & SIMULATION (6 COLS, STICKY) -->
+<div class="lg:col-span-6 space-y-4 lg:sticky lg:top-6">
+<!-- 3. 결과 -->
+<div class="p-5 bg-slate-800 text-white rounded-2xl shadow-xl relative overflow-hidden" id="resultBox">
+<div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20"></div>
+<!-- 상태 피드백 멘트 -->
+<div class="text-center font-bold text-lg mb-4 pb-3 border-b border-slate-700 text-yellow-400" id="statusMessage">
                         ⚡ 좌측에 금액을 입력하고 탈출각을 확인하세요!
                     </div>
-
-                    <div class="space-y-3 relative z-10">
-                        <div class="flex justify-between items-center bg-slate-700/50 p-3.5 rounded-xl border border-slate-600">
-                            <span class="text-sm text-slate-300 font-medium">목표 평단가</span>
-                            <div class="text-right">
-                                <span id="resTargetAvg" class="text-2xl font-black text-white">0</span>
-                                <span class="text-sm text-slate-400 ml-1">원</span>
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
-                                <span class="block text-xs text-slate-400 mb-1">현재 수익률</span>
-                                <span id="resCurrentReturn" class="font-bold text-lg text-red-400">0%</span>
-                            </div>
-                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
-                                <span class="block text-xs text-slate-400 mb-1">물타기 후 수익률</span>
-                                <span id="resNewReturn" class="font-bold text-lg text-blue-400">0%</span>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-between items-center pt-2 px-1">
-                            <span class="text-sm text-slate-400">총 투자금</span>
-                            <div class="text-right">
-                                <span id="resTotalAmount" class="font-semibold text-white">0</span>
-                                <span class="text-xs text-slate-500 ml-1">원</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button onclick="copyResult()" class="mt-5 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-md text-sm flex justify-center items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+<div class="space-y-3 relative z-10">
+<div class="flex justify-between items-center bg-slate-700/50 p-3.5 rounded-xl border border-slate-600">
+<span class="text-sm text-slate-300 font-medium">목표 평단가</span>
+<div class="text-right">
+<span class="text-2xl font-black text-white" id="resTargetAvg">0</span>
+<span class="text-sm text-slate-400 ml-1">원</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+<span class="block text-xs text-slate-400 mb-1">현재 수익률</span>
+<span class="font-bold text-lg text-red-400" id="resCurrentReturn">0%</span>
+</div>
+<div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+<span class="block text-xs text-slate-400 mb-1">물타기 후 수익률</span>
+<span class="font-bold text-lg text-blue-400" id="resNewReturn">0%</span>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2 px-1">
+<span class="text-sm text-slate-400">총 투자금</span>
+<div class="text-right">
+<span class="font-semibold text-white" id="resTotalAmount">0</span>
+<span class="text-xs text-slate-500 ml-1">원</span>
+</div>
+</div>
+</div>
+<button class="mt-5 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-md text-sm flex justify-center items-center gap-2" onclick="copyResult()">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                         📋 갤러리에 구조 요청 (결과 복사)
                     </button>
-                </div>
-
-                <!-- 물타기 전략 안내 팁 박스 -->
-                <div class="p-4 bg-white/80 rounded-2xl border border-slate-200/80 shadow-sm text-xs text-slate-600 space-y-2">
-                    <span class="font-bold text-slate-800 flex items-center gap-1.5 text-sm">
+</div>
+<!-- 물타기 전략 안내 팁 박스 -->
+<div class="p-4 bg-white/80 rounded-2xl border border-slate-200/80 shadow-sm text-xs text-slate-600 space-y-2">
+<span class="font-bold text-slate-800 flex items-center gap-1.5 text-sm">
                         💡 현명한 분할 매수 팁
                     </span>
-                    <p class="leading-relaxed">무작정 물타기(Averaging Down)를 하면 비중이 과도하게 커질 수 있습니다. 지지선 확인 후 정액 분할 매수를 추천합니다.</p>
-                </div>
-
-                <div class="p-4 bg-white/70 rounded-xl border border-slate-200 text-center">
-                    <p class="text-xs text-slate-600 font-medium mb-2">물타기 손익분기점 계산 가이드북</p>
-                    <a href="guides/guide1.html" class="inline-block w-full py-2.5 px-4 bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold rounded-lg transition text-center">
+<p class="leading-relaxed">무작정 물타기(Averaging Down)를 하면 비중이 과도하게 커질 수 있습니다. 지지선 확인 후 정액 분할 매수를 추천합니다.</p>
+</div>
+<div class="p-4 bg-white/70 rounded-xl border border-slate-200 text-center">
+<p class="text-xs text-slate-600 font-medium mb-2">물타기 손익분기점 계산 가이드북</p>
+<a class="inline-block w-full py-2.5 px-4 bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold rounded-lg transition text-center" href="guides/guide1.html">
                         📖 평단가 탈출 전략 가이드 보기
                     </a>
-                </div>
-            </div>
-        </div>
-        <!-- AdSense / Affiliate -->
-        <div class="mt-8 space-y-3">
-            <div class="text-center text-slate-400 text-xs py-6 border border-dashed border-slate-300 rounded-xl bg-slate-50/50 flex items-center justify-center">
-                <span>[Google AdSense / 하단 광고 영역]</span>
-            </div>
-            
-        </div>
+</div>
+</div>
+</div>
+<!-- AdSense / Affiliate -->
+<div class="mt-8 space-y-3">
+<div class="text-center text-slate-400 text-xs py-6 border border-dashed border-slate-300 rounded-xl bg-slate-50/50 flex items-center justify-center">
+<span>[Google AdSense / 하단 광고 영역]</span>
+</div>
+</div>
+<footer class="border-t border-slate-200/80 mt-6 pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+<div>© 2026 물타기 계산기. All rights reserved.</div>
+<div class="flex gap-4">
+<a class="hover:text-slate-800 transition-colors" href="terms.html">이용약관</a>
+<a class="hover:text-slate-800 transition-colors" href="privacy.html">개인정보처리방침</a>
+</div>
+</footer>
 
-        <footer class="border-t border-slate-200/80 mt-6 pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
-            <div>© 2026 물타기 계산기. All rights reserved.</div>
-            <div class="flex gap-4">
-                <a href="terms.html" class="hover:text-slate-800 transition-colors">이용약관</a>
-                <a href="privacy.html" class="hover:text-slate-800 transition-colors">개인정보처리방침</a>
-            </div>
-        </footer>
+<!-- 하단 대형 배너 (푸터 직전) -->
+<div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; overflow: hidden; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2228289204702106"
+         data-ad-slot="3416334507"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- 하단 대형 배너 (푸터 직전) -->
 
-    <!-- 하단 대형 배너 (푸터 직전) -->
-    <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; overflow: hidden; text-align: center;">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2228289204702106"
-             data-ad-slot="3416334507"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-        <!-- 중간 반응형 배너 (In-Result Slot) -->
-    
+<!-- 중간 반응형 배너 (In-Result Slot) -->
+<!-- 본문 중간 반응형 배너 -->
 
-    <!-- 본문 중간 반응형 배너 -->
-    <div class="manual-ad-box ad-mid-banner" style="width: 100%; max-width: 960px; margin: 20px auto; overflow: hidden; text-align: center;">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2228289204702106"
-             data-ad-slot="1186914926"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
+<!-- 본문 중간 반응형 배너 -->
+<div class="manual-ad-box ad-mid-banner" style="width: 100%; max-width: 960px; margin: 20px auto; overflow: hidden; text-align: center;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2228289204702106"
+         data-ad-slot="1186914926"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 </main>
-
-    <script>
+<script>
         function formatNum(num) {
             if (!isFinite(num) || isNaN(num)) return '0';
             return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -377,21 +359,16 @@
             document.getElementById('resultBox').classList.add('hidden');
         }
     </script>
-    
-
-
-    <!-- E-E-A-T 서브페이지 네비게이션 링크 -->
-    <div class="max-w-4xl mx-auto px-4 py-4 mt-6 border-t border-slate-200 flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500">
-        <a href="/about.html" class="hover:text-blue-600 transition">서비스 소개 &amp; 산출 공식</a>
-        <span class="text-slate-300">&middot;</span>
-        <a href="/privacy.html" class="hover:text-blue-600 transition">개인정보처리방침 (로컬 연산)</a>
-        <span class="text-slate-300">&middot;</span>
-        <a href="/sitemap.xml" class="hover:text-blue-600 transition">사이트맵</a>
-    </div>
-
-
-  <!-- Preemptive UX Helper: Auto comma formatting & Result sharing -->
-  <script>
+<!-- E-E-A-T 서브페이지 네비게이션 링크 -->
+<div class="max-w-4xl mx-auto px-4 py-4 mt-6 border-t border-slate-200 flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-slate-500">
+<a class="hover:text-blue-600 transition" href="/about.html">서비스 소개 &amp; 산출 공식</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-blue-600 transition" href="/privacy.html">개인정보처리방침 (로컬 연산)</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-blue-600 transition" href="/sitemap.xml">사이트맵</a>
+</div>
+<!-- Preemptive UX Helper: Auto comma formatting & Result sharing -->
+<script>
     document.addEventListener('DOMContentLoaded', function() {
       // Auto comma on number/text inputs with currency hints
       const moneyInputs = document.querySelectorAll('input[type="text"], input[type="number"], input[inputmode="numeric"]');
@@ -443,9 +420,8 @@
       }
     });
   </script>
-
-  <!-- Global UX Helper: Universal Result Copy & Toast -->
-  <script>
+<!-- Global UX Helper: Universal Result Copy & Toast -->
+<script>
     window.showToastNotification = function(msg) {
       let toast = document.getElementById('global-ux-toast');
       if (!toast) {
@@ -496,7 +472,5 @@
       document.body.removeChild(ta);
     }
   </script>
-
 </body>
 </html>
-
