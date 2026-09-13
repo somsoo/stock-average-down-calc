@@ -280,12 +280,20 @@
             const cp = parseFloat(document.getElementById('currentPrice').value) || 0;
             const cq = parseFloat(document.getElementById('currentQuantity').value) || 0;
             const mp = parseFloat(document.getElementById('marketPrice').value) || 0;
-            const addAmt = parseFloat(document.getElementById('addAmount').value) || 0;
+            const rawAddAmt = parseFloat(document.getElementById('addAmount').value) || 0;
 
             if (cp <= 0 || cq <= 0 || mp <= 0) {
-                alert("현재 평단가, 보유 수량, 현재 시장가를 정확히 입력해주세요.");
+                alert("현재 평단가, 보유 수량, 현재 시장가를 양수로 정확히 입력해주세요.");
                 return;
             }
+
+            if (rawAddAmt < 0) {
+                alert("추가 매수 금액은 0원 이상이어야 합니다. (음수 입력 불가)");
+                document.getElementById('addAmount').value = 0;
+                return;
+            }
+
+            const addAmt = Math.max(0, rawAddAmt);
 
             // 물타기 수량 (소수점 버림)
             const addQuantity = Math.floor(addAmt / mp) || 0;
@@ -296,12 +304,13 @@
             const finalTotalAmt = totalCurrentAmt + actualAddAmt;
             const finalTotalQty = cq + addQuantity;
             
+            // 0 나누기 및 음수 방어
             const finalAvg = finalTotalQty > 0 ? (finalTotalAmt / finalTotalQty) : cp;
             
             // 현재 수익률
-            const currentReturn = ((mp - cp) / cp) * 100;
-            // 물타기 후 수익률 (현재가 기준)
-            const newReturn = ((mp - finalAvg) / finalAvg) * 100;
+            const currentReturn = cp > 0 ? (((mp - cp) / cp) * 100) : 0;
+            // 물타기 후 수익률 (0나누기 / Infinity 원천 방어)
+            const newReturn = finalAvg > 0 ? (((mp - finalAvg) / finalAvg) * 100) : 0;
 
             document.getElementById('resTargetAvg').innerText = formatNum(Math.round(finalAvg));
             document.getElementById('resTotalAmount').innerText = formatNum(Math.round(finalTotalAmt));
