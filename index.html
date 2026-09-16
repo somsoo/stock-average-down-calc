@@ -2,6 +2,11 @@
 
 <html lang="ko">
 <head>
+    <!-- Performance Optimization: Resource Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="index, follow" name="robots"/>
@@ -110,6 +115,17 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+    
+        /* U3 Accessibility: Global Keyboard Focus Ring Standard */
+        :focus-visible {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+        }
+        input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 1px !important;
+        }
+    
     </style>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
 <link href="https://stock-average-down-calc.enjoy-onepage.com/rss.xml" rel="alternate" title="주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 RSS Feed" type="application/rss+xml"/>
@@ -155,11 +171,11 @@
 <div class="space-y-4">
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">현재 내 평단가 (원)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentPrice" placeholder="0" type="number"/>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentPrice" placeholder="0" type="number" aria-label="0" />
 </div>
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">현재 보유 수량 (주/개)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentQuantity" placeholder="0" type="number"/>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentQuantity" placeholder="0" type="number" aria-label="0" />
 </div>
 </div>
 </div>
@@ -174,11 +190,11 @@
 <div class="space-y-4 relative z-10">
 <div>
 <label class="block text-xs font-semibold text-blue-600 mb-1">현재 시장가 (원)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="marketPrice" placeholder="0" type="number"/>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="marketPrice" placeholder="0" type="number" aria-label="0" />
 </div>
 <div>
 <label class="block text-xs font-semibold text-blue-600 mb-2">추가 매수할 금액 (원)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" id="addAmount" placeholder="0" type="number"/>
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" id="addAmount" placeholder="0" type="number" aria-label="0" />
 <!-- 빠른 시드 추가 버튼 -->
 <div class="grid grid-cols-4 gap-1.5 mt-1">
 <button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(100000)">+10만</button>
