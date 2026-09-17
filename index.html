@@ -148,6 +148,16 @@
     overflow: hidden !important;
   }
 </style>
+<style id="mobile-hardening-shield">
+  @media (max-width: 640px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+    button, [role="button"], a.btn {
+      min-height: 42px;
+    }
+  }
+</style>
 </head>
 <body class="text-slate-800 min-h-screen flex flex-col items-center py-8 px-4">
 <!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
@@ -171,11 +181,11 @@
 <div class="space-y-4">
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">현재 내 평단가 (원)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentPrice" placeholder="0" type="number" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentPrice" placeholder="0" type="number" min="0" aria-label="0" />
 </div>
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">현재 보유 수량 (주/개)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentQuantity" placeholder="0" type="number" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="currentQuantity" placeholder="0" type="number" min="0" aria-label="0" />
 </div>
 </div>
 </div>
@@ -190,11 +200,11 @@
 <div class="space-y-4 relative z-10">
 <div>
 <label class="block text-xs font-semibold text-blue-600 mb-1">현재 시장가 (원)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="marketPrice" placeholder="0" type="number" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300" id="marketPrice" placeholder="0" type="number" min="0" aria-label="0" />
 </div>
 <div>
 <label class="block text-xs font-semibold text-blue-600 mb-2">추가 매수할 금액 (원)</label>
-<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" id="addAmount" placeholder="0" type="number" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" id="addAmount" placeholder="0" type="number" min="0" aria-label="0" />
 <!-- 빠른 시드 추가 버튼 -->
 <div class="grid grid-cols-4 gap-1.5 mt-1">
 <button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(100000)">+10만</button>
