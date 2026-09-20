@@ -216,15 +216,15 @@
 <input class="w-full p-3 text-right font-bold text-lg border-0 bg-white shadow-inner rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition-all placeholder-slate-300 mb-2" id="addAmount" placeholder="0" type="number" min="0" aria-label="0" />
 <!-- 빠른 시드 추가 버튼 -->
 <div class="grid grid-cols-4 gap-1.5 mt-1">
-<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(100000)">+10만</button>
-<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(1000000)">+100만</button>
-<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition" onclick="addSeed(5000000)">+500만</button>
-<button class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition" onclick="addSeed('ALL')">🔥풀매수</button>
+<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition whitespace-nowrap" onclick="addSeed(100000)">+10만</button>
+<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition whitespace-nowrap" onclick="addSeed(1000000)">+100만</button>
+<button class="text-xs bg-white hover:bg-slate-50 text-slate-600 py-1.5 rounded-lg border border-slate-200 font-medium transition whitespace-nowrap" onclick="addSeed(5000000)">+500만</button>
+<button class="text-xs bg-red-50 hover:bg-red-100 text-red-600 py-1.5 rounded-lg border border-red-200 font-bold transition whitespace-nowrap" onclick="addSeed('ALL')">🔥풀매수</button>
 </div>
 </div>
 </div>
 </div>
-<button class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/30 transform transition active:scale-95 text-lg flex justify-center items-center" onclick="calculate()">
+<button class="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/30 transform transition active:scale-95 text-lg flex justify-center items-center whitespace-nowrap" onclick="calculate()">
                 🚨 탈출각 견적 뽑기
             </button>
 </div>
@@ -263,7 +263,7 @@
 </div>
 </div>
 </div>
-<button class="mt-5 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-md text-sm flex justify-center items-center gap-2" onclick="copyResult()">
+<button class="mt-5 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-md text-sm flex justify-center items-center gap-2 whitespace-nowrap" onclick="copyResult()">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                         📋 갤러리에 구조 요청 (결과 복사)
                     </button>
@@ -465,7 +465,40 @@
 </div>
 <!-- 하단 대형 배너 (푸터 직전) -->
 <!-- 중간 반응형 배너 (In-Result Slot) -->
-</main>
+
+    <!-- E-E-A-T FAQ Section (16-5 헌법 준수) -->
+    <section class="mt-8 mb-8 space-y-3">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문 (FAQ)</h2>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>입력한 데이터가 외부 서버에 저장되나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          아닙니다. 100% 사용자의 기기 브라우저 메모리 내에서만 연산되며, 어떠한 금융/개인 데이터도 외부로 전송되지 않습니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>2026년 최신 공식 기준이 반영되어 있나요?</span>
+          <summary class="text-blue-600 group-open:rotate-180 transition transform"></summary>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          네, 최신 고시된 법령 및 공공 기준 요율을 상수로 반영하여 정확한 산출 결과를 제공합니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>결과를 다른 사람이나 카카오톡으로 공유할 수 있나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          '결과 복사하기' 버튼을 누르면 정돈된 요약 텍스트와 바로가기 주소가 클립보드에 자동 복사됩니다.
+        </p>
+      </details>
+    </section>
+
+  </main>
 <script>
         function formatNum(num) {
             if (!isFinite(num) || isNaN(num)) return '0';
