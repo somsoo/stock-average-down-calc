@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
+    <title>주식 물타기 평단가 계산기 | 추가 매수별 평단가·손익분기점</title>
     <link>https://stock-average-down-calc.enjoy-onepage.com/</link>
-    <description>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 실시간 온라인 도구 및 팩트 기반 전문 칼럼 피드</description>
+    <description>보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 12 Sep 2026 03:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 03:12:25 +0900</lastBuildDate>
     <atom:link href="https://stock-average-down-calc.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터</title>
+      <title>주식 물타기 평단가 계산기 | 추가 매수별 평단가·손익분기점</title>
       <link>https://stock-average-down-calc.enjoy-onepage.com/</link>
       <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/</guid>
-      <description>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 실시간 온라인 무료 도구 및 시뮬레이터</description>
+      <description>보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률, 필요 현금을 즉시 시뮬레이션합니다.</description>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 서비스 소개 및 산출 공식 안내</title>
+      <title>이용약관 | 물타기 계산기</title>
+      <link>https://stock-average-down-calc.enjoy-onepage.com/terms.html</link>
+      <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/terms.html</guid>
+      <description>주식·코인 물타기 계산기 서비스 이용약관입니다.</description>
+      <pubDate>Thu, 01 Oct 2026 03:12:25 +0900</pubDate>
+    </item>
+    <item>
+      <title>서비스 소개 및 산출 기준 | 주식 물타기 평단가 계산기</title>
       <link>https://stock-average-down-calc.enjoy-onepage.com/about.html</link>
       <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/about.html</guid>
-      <description>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터의 데이터 처리 원칙, 공식 산출 로직 및 검증 기준입니다.</description>
+      <description>추가 매수 수량별 평단가·손익분기점 실시간 시뮬레이터</description>
       <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터 개인정보처리방침</title>
+      <title>개인정보처리방침 | 주식 물타기 평단가 계산기</title>
       <link>https://stock-average-down-calc.enjoy-onepage.com/privacy.html</link>
       <guid isPermaLink="true">https://stock-average-down-calc.enjoy-onepage.com/privacy.html</guid>
-      <description>주식 물타기 평단가 계산기 | 추가 매수 수량별 평단가·손익분기점 시뮬레이터의 개인정보 보호 및 100% 브라우저 메모리 로컬 연산 보안 정책입니다.</description>
+      <description>주식 물타기 평단가 계산기의 개인정보 처리방침 및 데이터 로컬 연산 원칙 안내</description>
       <pubDate>Sat, 12 Sep 2026 01:10:00 +0900</pubDate>
     </item>
   </channel>
