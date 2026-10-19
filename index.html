@@ -9,8 +9,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="index, follow" name="robots"/>
-<title>주식 물타기 평단가 계산기 | 추가 매수별</title>
-<meta content="보유 주식의 평균 단가와 수량, 현재가 및 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률," name="description"/>
+<title>주식 물타기 평단가 계산기 | 추가 매수 시뮬레이터</title>
+<meta content="보유 주식의 평단가와 추가 매수 금액을 입력하여 낮아지는 평단가와 탈출 목표 수익률을 계산합니다." name="description"/>
 <meta content="주식 물타기 계산기, 평단가 계산기, 추가매수 평단, 주식 분할매수 시뮬레이터, 손익분기점 계산, 평단 낮추기 계산기, 주식 탈출 계산" name="keywords"/>
 <link href="https://stock-average-down-calc.enjoy-onepage.com/" rel="canonical"/>
 <!-- 파비콘 & PWA 매니페스트 -->
@@ -523,8 +523,8 @@
             // 물타기 후 수익률 (0나누기 / Infinity 원천 방어)
             const newReturn = finalAvg > 0 ? (((mp - finalAvg) / finalAvg) * 100) : 0;
 
-            document.getElementById('resTargetAvg').innerText = formatNum(Math.round(finalAvg));
-            document.getElementById('resTotalAmount').innerText = formatNum(Math.round(finalTotalAmt));
+            document.getElementById('resTargetAvg').textContent = formatNum(Math.round(finalAvg));
+            document.getElementById('resTotalAmount').textContent = formatNum(Math.round(finalTotalAmt));
             
             const cRetEl = document.getElementById('resCurrentReturn');
             cRetEl.textContent = currentReturn.toFixed(2) + "%";
@@ -555,8 +555,8 @@
         }
 
         function copyResult() {
-            const finalAvg = document.getElementById('resTargetAvg').innerText;
-            const newReturn = document.getElementById('resNewReturn').innerText;
+            const finalAvg = document.getElementById('resTargetAvg').textContent;
+            const newReturn = document.getElementById('resNewReturn').textContent;
             
             const text = `[내 종목 탈출각 견적]\n목표 평단가: ${finalAvg}원\n예상 수익률: ${newReturn}\n#구조대 #언제와요 #물타기계산기`;
             
@@ -609,7 +609,7 @@
       window.copyResultToClipboard = function(textToCopy, customBtn) {
         if (!textToCopy) {
           const resEl = document.querySelector('#result, .result-box, [id*="result"], [class*="result"]');
-          textToCopy = resEl ? resEl.innerText.trim() : window.location.href;
+          textToCopy = resEl ? resEl.textContent.trim() : window.location.href;
         }
         navigator.clipboard.writeText(textToCopy + "\n\n👉 계산기 바로가기: " + window.location.href).then(() => {
           showToastNotification('계산 결과가 클립보드에 복사되었습니다!');
@@ -659,7 +659,7 @@
       let textToCopy = customText;
       if (!textToCopy) {
         const resEl = document.querySelector('#resultBox, .result-card, #result, [id*="result"], [class*="result"], [id*="res"]');
-        textToCopy = resEl ? resEl.innerText.trim() : document.title;
+        textToCopy = resEl ? resEl.textContent.trim() : document.title;
       }
       const fullText = textToCopy + "\n\n👉 바로가기: " + window.location.href;
       if (navigator.clipboard && navigator.clipboard.writeText) {
