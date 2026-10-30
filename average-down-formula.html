@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>물타기 계산법 | 평단가 공식과 본전까지 필요한 상승률</title>
+<meta name="description" content="추가 매수 후 평단가 = 총 매수금액 ÷ 총 수량입니다. 물타기 배수별 평단가, 하락률별 본전 회복에 필요한 상승률, 물타기가 위험해지는 지점을 계산 예로 정리했습니다."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://stock-average-down-calc.enjoy-onepage.com/average-down-formula.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta property="og:url" content="https://stock-average-down-calc.enjoy-onepage.com/average-down-formula.html"/>
+<meta property="og:site_name" content="주식 물타기 평단가 계산기"/>
+<meta property="og:title" content="물타기 계산법 | 평단가 공식과 본전까지 필요한 상승률"/>
+<meta property="og:description" content="추가 매수 후 평단가 = 총 매수금액 ÷ 총 수량입니다. 물타기 배수별 평단가, 하락률별 본전 회복에 필요한 상승률, 물타기가 위험해지는 지점을 계산 예로 정리했습니다."/>
+<meta property="og:image" content="https://stock-average-down-calc.enjoy-onepage.com/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="/favicon.ico"/>
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "물타기 계산법: 평단가 공식과 본전까지 필요한 상승률", "description": "추가 매수 후 평단가 = 총 매수금액 ÷ 총 수량입니다. 물타기 배수별 평단가, 하락률별 본전 회복에 필요한 상승률, 물타기가 위험해지는 지점을 계산 예로 정리했습니다.", "inLanguage": "ko-KR", "dateModified": "2026-10-30", "datePublished": "2026-10-30", "mainEntityOfPage": "https://stock-average-down-calc.enjoy-onepage.com/average-down-formula.html", "author": {"@type": "Organization", "name": "Enjoy OnePage", "url": "https://enjoy-onepage.com/"}, "publisher": {"@type": "Organization", "name": "Enjoy OnePage", "url": "https://enjoy-onepage.com/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "평단가를 현재가보다 낮출 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "추가 매수만으로는 안 됩니다. 평단가는 항상 기존 평단가와 현재가 사이에 놓입니다."}}, {"@type": "Question", "name": "물타기와 불타기는 무엇이 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "물타기는 떨어졌을 때 더 사서 평단을 낮추는 것이고, 불타기는 오를 때 더 사서 비중을 늘리는 것입니다. 계산 공식은 같습니다."}}, {"@type": "Question", "name": "코인도 같은 공식인가요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 수량이 소수점이어도 총 매수금액 ÷ 총 수량으로 계산합니다."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "주식 물타기 평단가 계산기", "item": "https://stock-average-down-calc.enjoy-onepage.com/"}, {"@type": "ListItem", "position": 2, "name": "물타기 계산법: 평단가 공식과 본전까지 필요한 상승률", "item": "https://stock-average-down-calc.enjoy-onepage.com/average-down-formula.html"}]}]</script>
+<style>:root{--a:#ea580c}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#1e293b;background:#f8fafc;line-height:1.75;word-break:keep-all;overflow-wrap:break-word}
+header{background:#fff;border-bottom:1px solid #e2e8f0}header .in{max-width:760px;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+header a{color:var(--a);font-weight:800;text-decoration:none}main{max-width:760px;margin:0 auto;padding:16px}
+.crumb{font-size:13px;color:#64748b;margin:4px 0 8px}.crumb a{color:#64748b}h1{font-size:1.55rem;line-height:1.4;margin:.3em 0 .6em}
+h2{font-size:1.2rem;margin:1.8em 0 .5em;padding-left:10px;border-left:4px solid var(--a)}p,li{font-size:16px}
+.sum{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:14px 18px}.sum ul{margin:0;padding-left:1.1em}.sum li{margin:.3em 0}
+table{width:100%;border-collapse:collapse;background:#fff;margin:.8em 0;font-size:15px}th,td{border:1px solid #e2e8f0;padding:8px 10px;text-align:left}th{background:#f1f5f9}
+.tw{overflow-x:auto}.note{font-size:14px;color:#64748b}.cta{display:block;text-align:center;background:var(--a);color:#fff;font-weight:800;padding:14px;border-radius:12px;text-decoration:none;margin:24px 0}
+.faq details{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:10px 14px;margin:8px 0}.faq summary{font-weight:700;cursor:pointer}
+.src{font-size:14px;color:#475569}.rel a{display:block;padding:10px 12px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin:6px 0;color:#1e293b;text-decoration:none;font-weight:600}
+.ad{margin:16px auto;text-align:center;overflow:hidden;max-width:100%}footer{text-align:center;font-size:13px;color:#64748b;padding:24px 16px;border-top:1px solid #e2e8f0;background:#fff;margin-top:32px}footer a{color:#64748b;margin:0 6px}</style>
+</head>
+<body>
+<header><div class="in"><a href="/">주식 물타기 평단가 계산기</a><a href="/" style="font-size:14px">계산기 열기 →</a></div></header>
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3824727725" data-ad-format="horizontal" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<main>
+<div class="crumb"><a href="/">주식 물타기 평단가 계산기</a> › 안내</div>
+<h1>물타기 계산법: 평단가 공식과 본전까지 필요한 상승률</h1>
+<p class="note">확인일: 2026년 10월 30일 · 아래 출처의 법령과 공식 발표를 기준으로 작성했습니다.</p>
+<div class="sum"><ul><li>새 평단가 = <b>(기존 수량 × 기존 평단 + 추가 수량 × 현재가) ÷ 전체 수량</b></li><li>주가가 떨어진 만큼 본전까지 필요한 상승률은 더 커집니다. <b>-50%면 +100%</b>가 필요합니다.</li><li>물타기는 본전까지의 거리를 줄이지만, <b>투자금과 손실 위험도 함께 커집니다</b>.</li><li>실제 손익에는 수수료와 세금이 더해지므로 계산값보다 조금 더 올라야 본전입니다.</li></ul></div>
+
+<h2>평단가 공식</h2>
+<p>평단가는 산 금액을 모두 더해 가진 주식 수로 나눈 값입니다(가중평균).
+예를 들어 50,000원에 100주를 산 주식이 35,000원(-30%)이 되어 100주를 더 사면, 평단가는 (5,000,000 + 3,500,000) ÷ 200 = <b>42,500원</b>입니다.</p>
+<h2>물타기 배수별 결과 (50,000원 × 100주, 현재가 35,000원)</h2>
+<div class="tw"><table><thead><tr><th>추가 매수</th><th>새 평단가</th><th>본전까지 필요한 상승</th><th>총 투자금</th></tr></thead><tbody>
+<tr><td>안 함</td><td>50,000원</td><td>+42.9%</td><td>5,000,000원</td></tr><tr><td>1배 (100주, 3,500,000원)</td><td>42,500원</td><td>+21.4%</td><td>8,500,000원</td></tr><tr><td>2배 (200주, 7,000,000원)</td><td>40,000원</td><td>+14.3%</td><td>12,000,000원</td></tr><tr><td>3배 (300주, 10,500,000원)</td><td>38,750원</td><td>+10.7%</td><td>15,500,000원</td></tr></tbody></table></div>
+<p>2배, 3배로 사도 평단가는 현재가에 가까워질 뿐 현재가보다 낮아지지는 않습니다. 반대로 투자금은 계속 늘어서, 주가가 더 떨어지면 손실 금액이 커집니다.</p>
+<h2>하락률별 본전 회복에 필요한 상승률</h2>
+<div class="tw"><table><thead><tr><th>하락률</th><th>본전까지 필요한 상승률</th></tr></thead><tbody><tr><td>-10%</td><td>+11.1%</td></tr><tr><td>-20%</td><td>+25.0%</td></tr><tr><td>-30%</td><td>+42.9%</td></tr><tr><td>-40%</td><td>+66.7%</td></tr><tr><td>-50%</td><td>+100.0%</td></tr><tr><td>-70%</td><td>+233.3%</td></tr></tbody></table></div>
+<p>필요 상승률 = 하락률 ÷ (100 − 하락률) × 100. 떨어질수록 회복이 어려워지는 이유입니다.</p>
+<h2>물타기 전에 따져 볼 것</h2>
+<ul><li>회사의 실적이나 사업 전망이 바뀌어 떨어진 것인지, 시장 전체가 흔들린 것인지 먼저 구분하세요.</li>
+<li>한 종목 비중이 지나치게 커지지 않도록 미리 상한을 정하세요.</li>
+<li>나눠 사기로 했다면 가격 기준(예: 10% 내릴 때마다)과 횟수를 미리 정해 두세요.</li>
+<li>수수료와 거래세는 증권사와 시장마다 다르니, 매도 때의 실제 비용을 확인하세요.</li></ul>
+<p class="note">이 페이지는 계산 원리 설명이며 투자 권유가 아닙니다.</p>
+
+<a class="cta" href="/">내 종목 평단가 계산하기 →</a>
+<h2>자주 묻는 질문</h2>
+<div class="faq"><details><summary>평단가를 현재가보다 낮출 수 있나요?</summary><p>추가 매수만으로는 안 됩니다. 평단가는 항상 기존 평단가와 현재가 사이에 놓입니다.</p></details><details><summary>물타기와 불타기는 무엇이 다른가요?</summary><p>물타기는 떨어졌을 때 더 사서 평단을 낮추는 것이고, 불타기는 오를 때 더 사서 비중을 늘리는 것입니다. 계산 공식은 같습니다.</p></details><details><summary>코인도 같은 공식인가요?</summary><p>네. 수량이 소수점이어도 총 매수금액 ÷ 총 수량으로 계산합니다.</p></details></div>
+<h2>출처</h2>
+<ul class="src"><li><a href="https://fine.fss.or.kr/" rel="nofollow noopener" target="_blank">금융감독원 파인 (금융소비자 정보 포털)</a></li></ul>
+<p class="note">이 페이지는 일반적인 안내이며 법률·세무 자문이 아닙니다. 개인 사정에 따라 결과가 다를 수 있으니 중요한 결정 전에는 담당 기관에 확인하세요.</p>
+<h2>함께 보면 좋은 안내</h2>
+<div class="rel"><a href="/">주식 물타기 평단가 계산기 →</a></div>
+</main>
+<div class="ad" style="min-height:280px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3416334507" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<footer><a href="/">주식 물타기 평단가 계산기</a><a href="/privacy.html">개인정보처리방침</a><a href="https://enjoy-onepage.com/">Enjoy OnePage 전체 도구</a></footer>
+</body>
+</html>
